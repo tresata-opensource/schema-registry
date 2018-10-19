@@ -64,7 +64,7 @@
         <repository>
             <id>confluent</id>
             <name>Confluent</name>
-            <url>${confluent.maven.repo}</url>
+            <url>https://packages.confluent.io/maven/</url>
         </repository>
     </repositories>
 
@@ -149,4 +149,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+      <repository>
+        <id>oss-libs-release-local</id>
+        <url>http://server02.tresata.com:8081/artifactory/oss-libs-release-local</url>
+      </repository>
+     <snapshotRepository>
+       <name>oss-libs-snapshot-local</name>
+       <url>http://server02.tresata.com:8081/artifactory/oss-libs-snapshot-local</url>
+     </snapshotRepository>
+  </distributionManagement>
 </project>
